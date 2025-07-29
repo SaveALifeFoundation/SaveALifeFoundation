@@ -20,7 +20,7 @@ export default function Beneficiaries() {
 
       {/* card wrapper */}
       <div className="card">
-        <h2>Our Beneficiaries:Lives You’ve Transformed</h2>
+        <h2>Our Beneficiaries: Lives You’ve Transformed</h2>
         <ul>
           {people.map(p => <li key={p}>{p}</li>)}
         </ul>

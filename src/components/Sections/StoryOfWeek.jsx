@@ -19,9 +19,9 @@ export default function StoryOfWeek() {
 
       {/* card content */}
       <div className="card">
-        <h2>Story of the Week:Noah’s Fight for Breath</h2>
+        <h2>Story of the Week: Noah’s Fight for Breath</h2>
         <p>
-          “Mama, will I ever run again?”<br></br>Meet Noah, 6, whose laughter once echoed through playgrounds. Today, it’s replaced by the whir of machines keeping him alive. Born with a rare heart defect (Hypoplastic Left Heart Syndrome) and scarred lungs from a brutal infection, Noah now faces two battles:<br></br>
+          “Mama, will I ever run again?”<br></br>Meet Noah, 3, whose laughter once echoed through playgrounds. Today, it’s replaced by the whir of machines keeping him alive. Born with a rare heart defect (Hypoplastic Left Heart Syndrome) and scarred lungs from a brutal infection, Noah now faces two battles:<br></br>
           A failing heart that’s endured four open-heart surgeries.<br></br>
           Lungs ravaged by fibrosis, forcing him onto a PLAD device just to breathe.<br></br>
           His mother, Sarah, sold everything to stay by his hospital bed. For 11 months, they’ve celebrated birthdays, holidays, and tearful nights in sterile rooms. Noah’s hair fell out in patches—one shaped like a heart, his mom calls it “a sign love would find us.”<br></br>
@@ -30,7 +30,7 @@ export default function StoryOfWeek() {
           👉 You can rewrite Noah’s story.
 Donate Here to Fund Noah’s Transplant
         </p>
-        <a href="#story" className="btn-outline">Read More</a>
+        <a href="#donate" className="btn-outline">Donate Now</a>
       </div>
     </motion.section>
   );

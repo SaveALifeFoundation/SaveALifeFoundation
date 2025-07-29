@@ -17,7 +17,7 @@
 /* Bring card above the overlay */
 .section.beneficiaries .card {
   z-index: 1;
-  color: #333;              /* dark text on white card */
+  color: #fffdfd;              /* dark text on white card */
   text-align: left;
 }
 
@@ -36,5 +36,5 @@
   content: '✓';
   position: absolute;
   left: 0;
-  color: #6F17FF;
+  color: #fcfcfd;
 }

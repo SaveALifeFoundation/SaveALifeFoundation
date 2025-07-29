@@ -19,7 +19,7 @@ export default function OurMission() {
 
       {/* card wrapper */}
       <div className="card">
-        <h2>Our Mission:Where Your Donation Goes</h2>
+        <h2>Our Mission: Where Your Donation Goes</h2>
         <p>
           “To bridge the gap between suffering and survival with urgency, innovation, and unwavering humanity.”<br></br>We target the root causes of despair:<br></br>Ending Hunger: Distributing nutrient-rich food hampers in famine-stricken communities.<br></br>
 

@@ -11,14 +11,14 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6); /* tweak for contrast */
+  background: rgb(250, 248, 248); /* tweak for contrast */
   z-index: 0;
 }
 
 /* Ensure your .card from SectionCard.css sits above the overlay */
 .section.about-us .card {
-  z-index: 1;
-  color: #fff;            /* white text on dark overlay */
+  z-index: 3;
+  color: #020007;            /* white text on dark overlay */
   text-align: center;
 }
 .about-content {
