@@ -1,0 +1,40 @@
+.section.beneficiaries {
+  position: relative;
+  padding: 0;               /* card handles its own padding */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Dark overlay so white card text pops */
+.section.beneficiaries .overlay {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+/* Bring card above the overlay */
+.section.beneficiaries .card {
+  z-index: 1;
+  color: #333;              /* dark text on white card */
+  text-align: left;
+}
+
+/* Style the list inside the card */
+.section.beneficiaries .card ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0 0;
+}
+.section.beneficiaries .card li {
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+.section.beneficiaries .card li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #6F17FF;
+}

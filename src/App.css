@@ -1,0 +1,15 @@
+/* src/App.css */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  text-align: center;
+}
+
+main {
+  flex: 1;
+  padding: 2rem;
+}
+main > .section {
+  margin: 2rem 0;
+}

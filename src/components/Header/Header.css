@@ -1,0 +1,118 @@
+/* Preserve original header styles */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: linear-gradient(90deg, #6F17FF 0%, #9B23FF 100%);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  padding: 0.5rem 1rem;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-container {
+  flex-shrink: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  background: white;
+  padding: 4px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.logo {
+  height: 48px;
+  width: 48px;
+  object-fit: contain;
+}
+
+.site-title {
+  flex-grow: 1;
+  margin: 0 2rem;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Hide normal nav links, show hamburger */
+.nav-links {
+  display: none;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Optional: animation states if you want to rotate on open */
+.bar.open:nth-child(1) {
+  transform: rotate(45deg) translateY(6px);
+}
+.bar.open:nth-child(2) {
+  opacity: 0;
+}
+.bar.open:nth-child(3) {
+  transform: rotate(-45deg) translateY(-6px);
+}
+
+/* Dropdown menu styles */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 1rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  padding: 1rem;
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 999;
+}
+
+.dropdown-menu .nav-link {
+  color: #6F17FF;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  transition: color 0.3s ease;
+}
+
+.dropdown-menu .nav-link:hover {
+  color: #9B23FF;
+}
+
+/* For large screens: optionally show full nav bar */
+@media screen and (min-width: 992px) {
+  .hamburger {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .dropdown-menu {
+    display: none !important; /* don’t show dropdown on desktop */
+  }
+}

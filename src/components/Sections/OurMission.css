@@ -1,0 +1,34 @@
+.section.mission {
+  position: relative;
+  padding: 0;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* semi-transparent overlay for darkening bg */
+.section.mission .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* adjust brightness */
+  z-index: 0;
+}
+
+/* style for the card content */
+.section.mission .card {
+  z-index: 1;
+  color: #fff; /* white text on dark overlay */
+  text-align: center;
+}
+
+.section.mission h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.section.mission p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
