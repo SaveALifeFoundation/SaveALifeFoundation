@@ -45,19 +45,36 @@ export default function DonationFormSection() {
   };
 
   const startCamera = async () => {
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({
+      video: { facingMode: { exact: 'environment' } } // ✅ Prefer back camera
+    });
+    setCameraStream(stream);
+    setTimeout(() => {
+      if (videoRef.current) {
+        videoRef.current.srcObject = stream;
+      }
+    }, 100);
+  } catch (err) {
+    alert('Unable to access back camera. Trying default camera instead.');
+    console.error(err);
+
+    // ✅ Fallback to default camera if environment is not available
     try {
-      const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-      setCameraStream(stream);
+      const fallbackStream = await navigator.mediaDevices.getUserMedia({ video: true });
+      setCameraStream(fallbackStream);
       setTimeout(() => {
         if (videoRef.current) {
-          videoRef.current.srcObject = stream;
+          videoRef.current.srcObject = fallbackStream;
         }
       }, 100);
-    } catch (err) {
+    } catch (fallbackErr) {
       alert('Camera access denied or not supported.');
-      console.error(err);
+      console.error(fallbackErr);
     }
-  };
+  }
+};
+
 
   const captureImage = () => {
     const canvas = canvasRef.current;
